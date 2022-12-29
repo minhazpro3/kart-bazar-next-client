@@ -1,14 +1,12 @@
-@mixin show_button_large {
+@mixin shop_button_extra_small {
   border: 0px;
-  padding: 10px 1rem;
+  padding: 4px 12px;
   background-color: $color_button_red;
   color: $color_white;
-  font-size: $font_medium;
+  font-size: $font_large_small;
   font-family: $font_family_poppins;
-  display: flex;
-  align-items: center;
-  gap: 5px;
   font-weight: $font_600;
+  margin-top: 8px;
   border-radius: 25px;
   &:hover {
     cursor: pointer;

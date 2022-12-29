@@ -61,7 +61,7 @@
       }
 
       .shop_now {
-        @include show_button_large;
+        @include shop_button_large;
       }
     }
   }
@@ -75,6 +75,31 @@
 
     .banner_text_right {
       position: absolute;
+      top: 2rem;
+      left: 1rem;
+      h2 {
+        font-size: $font_heading;
+        color: $color_button_red;
+        font-family: $font_family_roboto;
+      }
+      #off {
+        color: $color_gray;
+        font-size: $font_large_small;
+        margin: 0px 5px;
+      }
+      .refresh {
+        margin: 8px 0px;
+        color: $color_damage_green;
+        font-size: $font_large;
+      }
+      .week_deal {
+        font-size: $font_medium;
+        opacity: 75%;
+      }
+
+      .shop_right_button {
+        @include shop_button_extra_small;
+      }
     }
   }
 }
