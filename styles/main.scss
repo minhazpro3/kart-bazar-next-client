@@ -1,8 +1,12 @@
 // common styles
 @import "./common/colors";
+@import "./common/fonts_size";
+@import "./common/container";
 
 // pages styles
 @import "./pages/index";
 
 // components styles
 @import "./components/share/header";
+@import "./components/home/banner";
+@import "./components/home/home";
