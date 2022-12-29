@@ -18,6 +18,51 @@
       position: absolute;
       top: 3rem;
       left: 2.5rem;
+
+      p {
+        opacity: 85%;
+        font-size: $font_medium;
+      }
+
+      #parseint {
+        color: $color_button_red;
+        background-color: $color_button_background_red;
+        background: linear-gradient(
+          to right,
+          $color_button_background_red,
+          $color_white
+        );
+        opacity: 100% !important;
+        font-weight: $font_600;
+        padding: 6px 10px;
+        margin: 0px 12px;
+        border-radius: 20px;
+      }
+
+      h2 {
+        font-size: $font_large_large_heading;
+        margin: 1.5rem 0px 5px 0px;
+        font-family: $font_family_poppins;
+        opacity: 90%;
+      }
+
+      #daily_need {
+        color: $color_damage_green;
+        margin: 0px;
+        font-family: $font_family_poppins;
+      }
+
+      #some_des {
+        font-size: $font_large_medium;
+        font-family: $font_family_poppins;
+        opacity: 75%;
+        width: 40%;
+        margin: 1rem 0px;
+      }
+
+      .shop_now {
+        @include show_button_large;
+      }
     }
   }
 
@@ -26,6 +71,10 @@
     .banner_right_img {
       position: relative;
       width: 100%;
+    }
+
+    .banner_text_right {
+      position: absolute;
     }
   }
 }

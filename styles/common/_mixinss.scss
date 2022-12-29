@@ -1,0 +1,20 @@
+@mixin show_button_large {
+  border: 0px;
+  padding: 10px 1rem;
+  background-color: $color_button_red;
+  color: $color_white;
+  font-size: $font_medium;
+  font-family: $font_family_poppins;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: $font_600;
+  border-radius: 25px;
+  &:hover {
+    cursor: pointer;
+    font-weight: $font_600;
+    background-color: $color_damage_green;
+    margin-left: 6px;
+    transition: all 200ms ease-in;
+  }
+}
