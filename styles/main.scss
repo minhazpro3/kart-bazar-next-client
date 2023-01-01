@@ -4,8 +4,7 @@
 @import "./common/container";
 @import "./common/fonts_family";
 @import "./common/fonts_weight";
-@import "./common/shop_button_small";
-@import "./common/shop_button_large";
+@import "./common/shop_buttons";
 
 // pages styles
 @import "./pages/index";
@@ -14,3 +13,6 @@
 @import "./components/share/header";
 @import "./components/home/banner";
 @import "./components/home/home";
+@import "./components/home/category";
+@import "./components/home/product";
+@import "./components/home/product_cart";

@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import banner1 from "../../public/banner-left.jpg";
 import banner2 from "../../public/banner-right.jpg";
-import { HiArrowNarrowRight } from "react-icons/hi";
 
 const Banner = () => {
   return (
@@ -28,9 +27,7 @@ const Banner = () => {
             Many organizations have issued official statements encouraging
             people to reduce their intake of sugary drinks.
           </p>
-          <button className="shop_now">
-            Shop Now <HiArrowNarrowRight />
-          </button>
+          <button className="shop_now">Shop Now &#8594;</button>
         </div>
       </div>
       <div className="banner_right">

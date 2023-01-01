@@ -61,7 +61,7 @@
       }
 
       .shop_now {
-        @include shop_button_large;
+        @include shop_buttons(medium);
       }
     }
   }
@@ -98,7 +98,7 @@
       }
 
       .shop_right_button {
-        @include shop_button_extra_small;
+        @include shop_buttons(small);
       }
     }
   }
