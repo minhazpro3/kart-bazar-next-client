@@ -55,8 +55,6 @@ const Category = () => {
     <div className="category_div">
       <h1>Shop By Categories</h1>
       <Swiper
-        
-        
         breakpoints={{
           540: {
             slidesPerView: 2,

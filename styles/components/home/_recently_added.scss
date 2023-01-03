@@ -1,0 +1,31 @@
+.recently_added_cart {
+  display: inline-block;
+  box-shadow: 0px 6px 8px 1px gray;
+  display: grid;
+  grid-template-columns: [left] 6rem [right] 1fr;
+  align-items: center;
+  padding: 5px 12px;
+  cursor: pointer;
+  &:hover .recently_added_cart_texts > h3 {
+    color: $color_damage_green;
+    transition: all 200ms ease-in;
+  }
+  .recently_added_cart_image {
+    width: 90px;
+    height: 90px;
+    position: relative;
+  }
+
+  .recently_added_cart_texts {
+    h3 {
+      font-size: $font_medium;
+      font-weight: $font_600;
+      opacity: 75%;
+      font-family: $font_family_poppins;
+    }
+    h6 {
+      font-size: $font_medium;
+      color: $color_damage_green;
+    }
+  }
+}
