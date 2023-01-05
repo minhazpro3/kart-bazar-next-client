@@ -64,6 +64,8 @@
           background-color: inherit;
           color: $color_white;
           cursor: pointer;
+          padding: 5px 0px;
+          font-family: $font_family_roboto;
         }
 
         &:hover .add_to_cart_product {
@@ -88,19 +90,20 @@
       display: flex;
       position: absolute;
       top: 65%;
-      left: 15%;
+      left: 21%;
       transform: translate(-4%, -150%);
-      // -ms-transform: translate(-50%, -50%);
+      -ms-transform: translate(-4%, -150%);
       text-align: center;
 
       .button {
         display: block;
-        color: $color_indigo_medium;
+        color: $color_damage_green;
+        font-weight: $font_900;
         border: 1px solid gray;
         border-radius: 60%;
         font-size: $font_small_heading;
         margin: 1px 4px;
-        padding: 1.2rem 1.5rem;
+        padding: 10px 16px;
         opacity: 60%;
         cursor: pointer;
       }
