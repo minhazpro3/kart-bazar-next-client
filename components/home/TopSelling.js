@@ -3,24 +3,106 @@ import React from "react";
 import { Rating } from "react-simple-star-rating";
 
 const TopSelling = () => {
+  const products = [
+    {
+      id: 1,
+      title: "Chocolate Chip Cookies",
+      image: "https://i.ibb.co/FXKpGm0/1.png",
+      category: "Vegetable",
+      ratting: 4,
+      unit: "Pcs",
+      price: 34,
+      quantity: 3,
+    },
+    {
+      id: 2,
+      title: "Chocolate Chip Cookies",
+      image: "https://i.ibb.co/bK1CDjW/2.png",
+      category: "Vegetable",
+      ratting: 4,
+      unit: "Pcs",
+      price: 34,
+      quantity: 3,
+    },
+    {
+      id: 3,
+      title: "Chocolate Chip Cookies",
+      image: "https://i.ibb.co/MPFvwfk/3.png",
+      category: "Vegetable",
+      ratting: 4,
+      unit: "Pcs",
+      price: 34,
+      quantity: 3,
+    },
+    {
+      id: 4,
+      title: "Chocolate Chip Cookies",
+      image: "https://i.ibb.co/tpyv4xX/4.png",
+      category: "Vegetable",
+      ratting: 4,
+      unit: "Pcs",
+      price: 34,
+      quantity: 3,
+    },
+    {
+      id: 5,
+      title: "Chocolate Chip Cookies",
+      image: "https://i.ibb.co/F795NVN/5.png",
+      category: "Vegetable",
+      ratting: 4,
+      unit: "Pcs",
+      price: 34,
+      quantity: 3,
+    },
+    {
+      id: 6,
+      title: "Chocolate Chip Cookies",
+      image: "https://i.ibb.co/qrRwJkW/6.png",
+      category: "Vegetable",
+      ratting: 4,
+      unit: "Pcs",
+      price: 34,
+      quantity: 3,
+    },
+    {
+      id: 7,
+      title: "Chocolate Chip Cookies",
+      image: "https://i.ibb.co/bg7Q1F2/7.png",
+      category: "Vegetable",
+      ratting: 4,
+      unit: "Pcs",
+      price: 34,
+      quantity: 3,
+    },
+    {
+      id: 8,
+      title: "Chocolate Chip Cookies",
+      image: "https://i.ibb.co/cbgfDKZ/8.png",
+      category: "Vegetable",
+      ratting: 4,
+      unit: "Pcs",
+      price: 34,
+      quantity: 3,
+    },
+  ];
   return (
     <div>
       {" "}
-      <h2>Top Selling</h2>
-      <div className="recently_added_cart">
-        <div className="recently_added_cart_image">
-          <Image
-            src="https://themes.pixelstrap.com/fastkart/assets/images/veg-3/cate1/1.png"
-            alt="cart image"
-            fill
-          />
+      <h1>Top Selling</h1>
+      {products?.map((product) => (
+        <div key={product.id} className="recently_added_cart">
+          <div className="recently_added_cart_image">
+            <Image src={product.image} alt="cart image" fill />
+          </div>
+          <div className="recently_added_cart_texts">
+            <p>Tuffets Britannia Cheezza </p>
+            <Rating className="rating" initialValue={4} readonly size={15} />
+            <br />
+            <span>$45.00</span>
+            <button className="rated_cart_button">add to cart &#8594;</button>
+          </div>
         </div>
-        <div className="recently_added_cart_texts">
-          <h3>Tuffets Britannia Cheezza </h3>
-          <Rating initialValue={4} readonly size={15} />
-          <h6>$45.00</h6>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

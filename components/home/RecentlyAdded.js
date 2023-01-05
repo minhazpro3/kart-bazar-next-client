@@ -87,7 +87,7 @@ const RecentlyAdded = () => {
   ];
   return (
     <div>
-      <h2>Recently Added</h2>
+      <h1>Recently Added</h1>
       {products?.map((product) => (
         <div key={product.id} className="recently_added_cart">
           <div className="recently_added_cart_image">
@@ -95,9 +95,9 @@ const RecentlyAdded = () => {
           </div>
           <div className="recently_added_cart_texts">
             <p>Tuffets Britannia Cheezza </p>
-            <Rating initialValue={4} readonly size={15} />
+            <Rating className="rating" initialValue={4} readonly size={15} />
             <br />
-            <span>$45.00</span>
+            <span>$ 45.00</span>
             <button className="rated_cart_button">add to cart &#8594;</button>
           </div>
         </div>

@@ -1,92 +1,108 @@
-.product_cart {
-  display: inline-block;
-  box-shadow: 0px 2px 10px 1px gray;
-  padding: 8px 12px;
-  overflow: hidden;
-  &:hover {
+.product_cart_main {
+  position: relative;
+  .product_cart {
+    display: inline-block;
+    box-shadow: 0px 2px 10px 1px gray;
+    padding: 8px 12px;
+    overflow: hidden;
+    &:hover {
+      .product_cart_img_div {
+        transform: scale(1.1);
+        transition: all 400ms ease-in;
+      }
+    }
     .product_cart_img_div {
-      transform: scale(1.1);
-      transition: all 400ms ease-in;
-    }
-  }
-  .product_cart_img_div {
-    padding: 3px 1.5rem;
+      padding: 3px 1.5rem;
 
-    .product_cart_img {
-      width: 100%;
-      height: 150px;
-      position: relative;
-    }
-  }
-
-  .product_cart_texts {
-    .category {
-      font-size: $font_large_small;
-      font-family: $font_family_poppins;
-      margin: 5px 0px;
-      opacity: 75%;
-    }
-    .title {
-      font-size: $font_large_medium;
-      font-family: $font_family_poppins;
-
-      opacity: 85%;
-    }
-    .unit {
-      font-size: $font_large_small;
-    }
-    .price {
-      font-size: $font_extra_large;
-      font-family: $font_family_roboto;
-      color: $color_damage_green;
-      margin: 6px 0px;
-      s {
-        color: $color_button_red;
-        font-size: $font_medium;
+      .product_cart_img {
+        width: 100%;
+        height: 150px;
+        position: relative;
       }
     }
 
-    .add_to_cart {
-      background-color: $color_gray;
-      padding: 3px 5px;
-      border-radius: 20px;
-      position: relative;
+    .product_cart_texts {
+      .category {
+        font-size: $font_large_small;
+        font-family: $font_family_poppins;
+        margin: 5px 0px;
+        opacity: 75%;
+      }
+      .title {
+        font-size: $font_large_medium;
+        font-family: $font_family_poppins;
 
-      h4 {
+        opacity: 85%;
+      }
+      .unit {
+        font-size: $font_large_small;
+      }
+      .price {
         font-size: $font_extra_large;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: $color_white;
+        font-family: $font_family_roboto;
+        font-weight: $font_500;
+        color: $color_damage_green;
+        margin: 6px 0px;
+        s {
+          color: $color_button_red;
+          font-size: $font_medium;
+        }
+      }
 
-        span {
-          font-size: $font_large_medium;
-          background-color: $color_damage_green;
-          padding-top: 6px;
-          padding-left: 7px;
-          padding-right: 7px;
-          border-radius: 60%;
+      .add_to_cart {
+        background-color: $color_damage_green;
+        padding: 3px 5px;
+        border-radius: 20px;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+
+        .add_to_cart_product {
+          border: 0px;
+          width: 100%;
+          background-color: inherit;
           color: $color_white;
           cursor: pointer;
         }
-      }
 
-      &:hover {
-        margin-left: 3px;
-        margin-right: -3px;
-        transition: all 300ms ease-in-out;
-
-        &::after {
-          position: absolute;
-          top: 20%;
-          left: 42%;
-          z-index: 2px;
-          content: "Cart ";
-          cursor: pointer;
-          background-color: $color_gray;
-          color: $color_damage_green;
-          font-size: $font_large_medium;
+        &:hover .add_to_cart_product {
+          transform: translateX(5%);
+          transition: all 200ms ease-out;
         }
+
+        &:hover {
+          background-color: $color_indigo_medium;
+        }
+      }
+    }
+  }
+
+  .button {
+    display: none;
+  }
+
+  &:hover {
+    .cart_hover_button {
+      transition: 0.5s ease;
+      display: flex;
+      position: absolute;
+      top: 65%;
+      left: 15%;
+      transform: translate(-4%, -150%);
+      // -ms-transform: translate(-50%, -50%);
+      text-align: center;
+
+      .button {
+        display: block;
+        color: $color_indigo_medium;
+        border: 1px solid gray;
+        border-radius: 60%;
+        font-size: $font_small_heading;
+        margin: 1px 4px;
+        padding: 1.2rem 1.5rem;
+        opacity: 60%;
+        cursor: pointer;
       }
     }
   }
