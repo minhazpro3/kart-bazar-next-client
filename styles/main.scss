@@ -10,7 +10,10 @@
 @import "./pages/index";
 
 // components styles
+
 @import "./components/share/header";
+
+// home pages
 @import "./components/home/banner";
 @import "./components/home/home";
 @import "./components/home/category";
@@ -18,3 +21,4 @@
 @import "./components/home/product_cart";
 @import "./components/home/topProducts";
 @import "./components/home/recently_added";
+@import "./components/home/bank_offer";

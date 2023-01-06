@@ -1,4 +1,5 @@
 import React from "react";
+import Bank_offer from "./Bank_offer";
 import Banner from "./Banner";
 import Category from "./Category";
 import Product from "./Product";
@@ -11,6 +12,7 @@ const Home = () => {
       <Category />
       <Product />
       <TopProducts />
+      <Bank_offer />
     </div>
   );
 };
