@@ -65,7 +65,7 @@ const Bank_offer = () => {
         </div>
         <div className="offer_cart_footer_right">
           <h2>
-            Code:23DHTDFH23 <span>Happy Shop!</span>
+            Code: S23DHTDFH23 <span>Happy Shop!</span>
           </h2>
         </div>
       </div>

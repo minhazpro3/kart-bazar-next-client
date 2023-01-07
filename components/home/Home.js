@@ -4,6 +4,7 @@ import Banner from "./Banner";
 import Category from "./Category";
 import Delivery from "./Delivery";
 import Product from "./Product";
+import Surety from "./Surety";
 import TopProducts from "./TopProducts";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <TopProducts />
       <Bank_offer />
       <Delivery />
+      <Surety />
     </div>
   );
 };

@@ -1,0 +1,51 @@
+.surety_cart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 1rem 0px;
+
+  .surety_type {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    grid-column-gap: 2.5rem;
+    padding: 2rem 2rem;
+    background-color: $color_what_light;
+    cursor: context-menu;
+    border-radius: 10px;
+
+    h3 {
+      font-size: $font_large_medium;
+      color: $color_gray_dark;
+      font-family: $font_family_roboto;
+      font-weight: $font_500;
+    }
+
+    p {
+      font-size: $font_extra_medium;
+      color: $color_title_down;
+      font-family: $font_family_roboto;
+      margin-top: 5px;
+    }
+
+    .icon {
+      color: $color_damage_green;
+    }
+
+    &:hover {
+      background-color: $color_damage_green;
+      transition: all 500ms ease-in;
+
+      h3 {
+        color: $color_white;
+      }
+      p {
+        color: $color_white;
+      }
+
+      .icon {
+        color: $color_white;
+      }
+    }
+  }
+}
