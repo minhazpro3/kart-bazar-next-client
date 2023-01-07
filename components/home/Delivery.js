@@ -26,7 +26,7 @@ const Delivery = () => {
             </span>
             Get latest feature updates
           </p>
-          <button>More</button>
+          <button className="delivery_more_button">More &#8594;</button>
         </div>
       </div>
       <div className="delivery_cart_right ">

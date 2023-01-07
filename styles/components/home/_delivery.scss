@@ -42,6 +42,10 @@
           font-size: $font_large_medium;
         }
       }
+      .delivery_more_button {
+        @include shop_buttons(more_deliver);
+        margin-top: 2.5rem;
+      }
     }
   }
   .delivery_cart_right {
