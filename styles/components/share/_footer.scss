@@ -58,11 +58,86 @@
             color: $color_white;
 
             &:hover {
-             
               margin-left: 2px;
               transition: all 200ms ease-in-out;
             }
           }
+        }
+      }
+    }
+
+    .footer_about_project {
+      margin-top: 10px;
+      color: $color_what_light;
+      h3 {
+        font-size: $font_large;
+        font-family: $font_family_roboto;
+        margin-bottom: 12px;
+      }
+
+      // link style for extend
+      .link {
+        font-size: $font_extra_medium;
+        font-weight: $font_300;
+        font-family: $font_family_roboto;
+        text-decoration: none;
+        color: $color_white;
+      }
+      // end
+
+      .about_links_f {
+        display: grid;
+        grid-template-rows: auto;
+        gap: 8px;
+
+        .about_link_f {
+          @extend .link;
+
+          &:hover {
+            margin-left: 2px;
+            transition: all 200ms ease-in-out;
+          }
+        }
+      }
+
+      .contact_info {
+        h3 {
+          font-size: $font_large;
+          font-family: $font_family_roboto;
+          margin: 12px 0px;
+        }
+        h6 {
+          @extend .link;
+          &:hover {
+            margin-left: 2px;
+            transition: all 200ms ease-in-out;
+          }
+        }
+      }
+    }
+
+    .footer_project_links {
+      color: $color_white;
+      margin-top: 10px;
+      
+       
+
+      h3 {
+        font-size: $font_large;
+        font-family: $font_family_roboto;
+        margin-bottom: 12px;
+      }
+      .project_page_link {
+        font-size: $font_extra_medium;
+        font-weight: $font_300;
+        font-family: $font_family_roboto;
+        text-decoration: none;
+        color: $color_white;
+        margin-top: 10px;
+
+        &:hover {
+          margin-left: 2px;
+          transition: all 200ms ease-in-out;
         }
       }
     }

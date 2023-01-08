@@ -1,11 +1,16 @@
 import React from "react";
 
 import { FaFacebook } from "react-icons/fa";
+import { BiCurrentLocation } from "react-icons/bi";
+import { FiPhoneCall } from "react-icons/fi";
+import { MdMarkEmailRead } from "react-icons/md";
+
 import {
   AiFillGoogleCircle,
   AiFillTwitterCircle,
   AiFillYoutube,
   AiFillLinkedin,
+  AiFillPrinter,
 } from "react-icons/ai";
 import Link from "next/link";
 
@@ -49,29 +54,63 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer_about_project">
-            <div>
-              <h3>About Kart Bazar</h3>
-              <Link href="#">About us</Link>
-              <Link href="#">Contact us</Link>
-              <Link href="#">Terms & Condition</Link>
-              <Link href="#">Careers </Link>
-              <Link href="#">Services</Link>
+            <h3>About Kart Bazar</h3>
+            <div className="about_links_f">
+              <Link className="about_link_f" href="#">
+                About us
+              </Link>
+              <Link className="about_link_f" href="#">
+                Contact us
+              </Link>
+              <Link className="about_link_f" href="#">
+                Terms & Condition
+              </Link>
+              <Link className="about_link_f" href="#">
+                Careers{" "}
+              </Link>
+              <Link className="about_link_f" href="#">
+                Services
+              </Link>
             </div>
-            <div>
+            <div className="contact_info">
               <h3>Store information</h3>
-              <h6>Kart Bazar Store, Bogura-5800</h6>
-              <h6>Call us: 1233489950</h6>
-              <h6>Email us: support@kartbazar.com</h6>
-              <h6>Fax: 124334</h6>
+              <h6>
+                {" "}
+                <BiCurrentLocation /> Kart Bazar Store, Bogura-5800
+              </h6>
+              <h6>
+                {" "}
+                <FiPhoneCall /> Call us: 1233489950
+              </h6>
+              <h6>
+                <MdMarkEmailRead /> Email us: support@kartbazar.com
+              </h6>
+              <h6>
+                <AiFillPrinter /> Fax: 124334
+              </h6>
             </div>
           </div>
           <div className="footer_project_links">
             <h3>Useful Link</h3>
-            <Link href="#">Your Order</Link>
-            <Link href="#">Your Account</Link>
-            <Link href="#">Track Order</Link>
-            <Link href="#">Your Cart</Link>
-            <Link href="#">FAQs</Link>
+            <Link className="project_page_link" href="#">
+              Your Order
+            </Link>
+            <br />
+            <Link className="project_page_link" href="#">
+              Your Account
+            </Link>
+            <br />
+            <Link className="project_page_link" href="#">
+              Track Order
+            </Link>
+            <br />
+            <Link className="project_page_link" href="#">
+              Your Cart
+            </Link>
+            <br />
+            <Link className="project_page_link" href="#">
+              FAQs
+            </Link>
           </div>
         </div>
       </div>
