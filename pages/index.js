@@ -1,8 +1,6 @@
 import Head from "next/head";
 
-import Header from "../components/share/Header";
 import HomePage from "../components/home/Home";
-import Footer from "./../components/share/Footer";
 
 export default function Home() {
   return (
@@ -19,8 +17,6 @@ export default function Home() {
       </Head>
       <main>
         <div>
-          <Header />
-
           <div className="container">
             <HomePage />
           </div>

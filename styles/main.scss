@@ -8,12 +8,14 @@
 
 // pages styles
 @import "./pages/index";
+@import "./pages/shop/index";
 
 // components styles
 
 // share components
 @import "./components/share/header";
 @import "./components/share/footer";
+@import "./components/share/head_cos";
 
 // home pages
 @import "./components/home/banner";
@@ -26,3 +28,6 @@
 @import "./components/home/bank_offer";
 @import "./components/home/delivery";
 @import "./components/home/surety";
+
+// shop page
+@import "./components/shop/filter";

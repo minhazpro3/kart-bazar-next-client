@@ -1,97 +1,107 @@
-.offer_cart_component {
-  margin: 1rem 0px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+.bank_offer_cart {
+  h1 {
+  margin-top: 1.5rem;
+  border-bottom: 2px solid $color_damage_green;
+  padding-bottom: 5px;
+  opacity: 75%;
+  display: inline-block;
+  font-family: $font_family_poppins;
+}
+  .offer_cart_component {
+    margin: 1rem 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 
-  .offer_cart_child {
-    background-color: $color_what_light;
-    padding-top: 2.5rem;
-    border-radius: 20px;
-    .offer_cart {
-      .offer_cart_text_image {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        .offer_text_left {
-          .text_icon {
-            display: flex;
-            gap: 7px;
-            align-items: center;
-            font-size: $font_extra_medium;
-            letter-spacing: -0.8px;
-            margin-bottom: 10px;
-            color: $color_damage_green;
-            span {
-              color: $color_gray_dark;
-            }
-          }
-          .left_offer {
-            font-family: $font_family_roboto;
-            font-size: $font_large_large;
-            color: $color_button_red;
-          }
-          .right_offer {
-            font-family: $font_family_roboto;
-            font-size: $font_large_large;
-            color: $color_damage_green;
-          }
-          .invest {
-            font-family: $font_family_roboto;
-            font-size: $font_medium;
-            font-weight: $font_500;
-            color: $color_gray_dark;
-            opacity: 75%;
-            margin-top: 5px;
-            span {
+    .offer_cart_child {
+      background-color: $color_what_light;
+      padding-top: 2.5rem;
+      border-radius: 20px;
+      .offer_cart {
+        .offer_cart_text_image {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          .offer_text_left {
+            .text_icon {
+              display: flex;
+              gap: 7px;
+              align-items: center;
+              font-size: $font_extra_medium;
+              letter-spacing: -0.8px;
+              margin-bottom: 10px;
               color: $color_damage_green;
-              font-weight: $font_600;
+              span {
+                color: $color_gray_dark;
+              }
+            }
+            .left_offer {
+              font-family: $font_family_roboto;
+              font-size: $font_large_large;
+              color: $color_button_red;
+            }
+            .right_offer {
+              font-family: $font_family_roboto;
+              font-size: $font_large_large;
+              color: $color_damage_green;
+            }
+            .invest {
+              font-family: $font_family_roboto;
+              font-size: $font_medium;
+              font-weight: $font_500;
+              color: $color_gray_dark;
+              opacity: 75%;
+              margin-top: 5px;
+              span {
+                color: $color_damage_green;
+                font-weight: $font_600;
+              }
+            }
+            .valid {
+              font-family: $font_family_roboto;
+              font-size: $font_medium;
+              font-weight: $font_500;
+              color: $color_gray_dark;
+              opacity: 75%;
+              margin-top: 3rem;
+              margin-bottom: 14px;
             }
           }
-          .valid {
-            font-family: $font_family_roboto;
-            font-size: $font_medium;
-            font-weight: $font_500;
-            color: $color_gray_dark;
-            opacity: 75%;
-            margin-top: 3rem;
-            margin-bottom: 14px;
+
+          &:hover .cart_imag {
+            transform: scale(1.1);
+            transition: all 200ms ease-out;
           }
         }
+      }
 
-        &:hover .cart_imag {
-          transform: scale(1.1);
-          transition: all 200ms ease-out;
+      .offer_cart_footer_left {
+        background: linear-gradient(to right, #d3163f, #c32222, #ed3f3f);
+        padding: 1rem 8px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        h2 {
+          color: $color_white;
+          display: flex;
+          justify-content: space-between;
+          font-family: $font_family_roboto;
+          font-weight: $font_500;
+          margin: 0px 5px;
         }
       }
-    }
-
-    .offer_cart_footer_left {
-      background: linear-gradient(to right, #d3163f, #c32222, #ed3f3f);
-      padding: 1rem 8px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      h2 {
-        color: $color_white;
-        display: flex;
-        justify-content: space-between;
-        font-family: $font_family_roboto;
-        font-weight: $font_500;
-        margin: 0px 5px;
-      }
-    }
-    .offer_cart_footer_right {
-      background: linear-gradient(to right, #037860, #29a38b, #5c9e91);
-      padding: 1rem 8px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      h2 {
-        color: $color_white;
-        display: flex;
-        justify-content: space-between;
-        font-family: $font_family_roboto;
-        font-weight: $font_500;
-        margin: 0px 5px;
+      .offer_cart_footer_right {
+        background: linear-gradient(to right, #037860, #29a38b, #5c9e91);
+        padding: 1rem 8px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        h2 {
+          color: $color_white;
+          display: flex;
+          justify-content: space-between;
+          font-family: $font_family_roboto;
+          font-weight: $font_500;
+          margin: 0px 5px;
+        }
       }
     }
   }
