@@ -16,7 +16,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div>
+    <div >
       <div className="container_footer">
         <div className="footer_child">
           <div className="footer_title">
