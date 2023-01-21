@@ -1,5 +1,6 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import Product_details from "../utils/Product_details";
 
 import Product_cart from "./Product_cart";
 
@@ -106,13 +107,22 @@ const Product = () => {
       quantity: 3,
     },
   ];
+  const [modal, setModal] = useState(false);
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <h1>Our Products</h1>
+      <div style={{ background: "#fff" }}>
+        {modal && <Product_details setModal={setModal} modal={modal} />}
+      </div>
       <div className="product_component">
         {products?.map((product) => (
-          <Product_cart product={product} key={product.id} />
+          <Product_cart
+            product={product}
+            setModal={setModal}
+            modal={modal}
+            key={product.id}
+          />
         ))}
       </div>
     </div>

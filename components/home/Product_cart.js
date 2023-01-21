@@ -1,10 +1,13 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 import { AiOutlineFolderView } from "react-icons/ai";
 import { BsCartCheck } from "react-icons/bs";
+import Product_details from "./../utils/Product_details";
 const Product_cart = (props) => {
   const { title, price, category, unit, ratting, link } = props.product;
+  const { modal, setModal } = props;
+
   return (
     <div className="product_cart_main">
       <div className="product_cart">
@@ -32,9 +35,10 @@ const Product_cart = (props) => {
         </div>
       </div>
       <div className="cart_hover_button">
-        <button className=" button">
+        <button onClick={() => setModal(!modal)} className=" button">
           <AiOutlineFolderView />
         </button>
+
         <button className=" button">
           <BsCartCheck />
         </button>

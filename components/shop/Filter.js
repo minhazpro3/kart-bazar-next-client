@@ -7,7 +7,7 @@ import { BiSearchAlt2 } from "react-icons/bi";
 const Filter = () => {
   return (
     <div>
-      <div className="filter_section">
+      <div className="filter_section" style={{ zIndex: 20 }}>
         <div className="filter_banner">
           <Image fill src={banner} alt="shope banner image" />
         </div>
