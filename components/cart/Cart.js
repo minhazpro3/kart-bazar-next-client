@@ -1,5 +1,6 @@
 import React from "react";
 import Cart_banner from "./Cart_banner";
+import Cart_grand_total from "./Cart_grand_total";
 import Cart_product from "./Cart_product";
 import Cart_products from "./Cart_products";
 
@@ -15,6 +16,7 @@ const Cart = () => {
       <div className="cart_main_components">
         {/* <Cart_products /> */}
         <Cart_product />
+        <Cart_grand_total />
       </div>
     </div>
   );

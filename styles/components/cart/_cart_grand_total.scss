@@ -1,0 +1,78 @@
+.grand_total_component {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1rem;
+  .offer_bigSale_image {
+    width: 100%;
+    height: 400px;
+    position: relative;
+  }
+
+  .apply_coupon {
+    h3 {
+      font-size: 30px;
+      font-weight: $font_500;
+      font-family: $font_family_roboto;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-size: $font_large_small;
+      font-family: $font_family_roboto;
+      opacity: 80%;
+    }
+    input {
+      margin-top: 4px;
+      width: 100%;
+      border-radius: 25px;
+      padding: 6px 6px;
+      font-size: $font_extra_medium;
+      border: 2px solid $color_damage_green;
+      outline: none;
+    }
+
+    .cart_subtotal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h5 {
+        font-size: $font_extra_medium;
+        font-family: $font_family_roboto;
+      }
+    }
+
+    .cart_discount {
+      @extend .cart_subtotal;
+    }
+    .cart_shipping {
+      @extend .cart_subtotal;
+    }
+    .grand_price {
+      @extend .cart_subtotal;
+      text-decoration: underline;
+      h5 {
+        color: $color_black;
+        font-size: $font_medium;
+      }
+
+      .only_price {
+        color: $color_damage_green !important;
+        font-size: $font_medium !important;
+      }
+    }
+
+    .checkout_button_div{
+        width: 100%;
+        text-align: center;
+        background-color: $color_damage_green;
+        padding: 8px 0;
+        .checkout_button {
+            text-decoration: none;
+            font-family: $font_family_roboto;
+            font-weight: $font_500;
+            color: $color_white;
+        }
+    }
+  }
+}
