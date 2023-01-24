@@ -1,0 +1,130 @@
+.cart_single_component {
+  display: grid;
+  grid-template-columns: 300px auto 300px;
+  gap: 15px;
+
+  .cart_image_title {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 20px;
+    .cart_image {
+      width: 70px;
+      height: 70px;
+      position: relative;
+    }
+
+    .title_texts {
+      h3 {
+        font-size: $font_large_medium;
+        font-family: $font_family_roboto;
+        font-weight: $font_500;
+        margin-bottom: 12px;
+        opacity: 90%;
+      }
+
+      p {
+        font-size: $font_large_small;
+        font-family: $font_family_roboto;
+        font-weight: $font_500;
+        opacity: 80%;
+      }
+    }
+  }
+
+  .cart_pricing_qty {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+
+    .cart_price {
+      p {
+        margin-bottom: 12px;
+        color: $color_gray_dark;
+        font-size: $font_large_medium;
+        font-family: $font_family_roboto;
+      }
+
+      h5 {
+        font-family: $font_family_roboto;
+        margin: 0;
+        font-weight: $font_500;
+      }
+      #save {
+        color: $color_damage_green;
+        font-weight: $font_600;
+      }
+    }
+
+    .cart_qty {
+      h3 {
+        font-size: $font_large_medium;
+        font-family: $font_family_roboto;
+        font-weight: $font_500;
+        margin-bottom: 12px;
+        opacity: 90%;
+      }
+
+      .qty_buttons {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        span {
+          color: $color_gray_dark;
+          font-size: $font_large_medium;
+          font-family: $font_family_roboto;
+        }
+        #minus {
+          @include shop_buttons(qty_buttons);
+        }
+        #plus {
+          @include shop_buttons(qty_buttons);
+        }
+      }
+    }
+
+    .cart_total {
+      h3 {
+        font-size: $font_large_medium;
+        font-family: $font_family_roboto;
+        font-weight: $font_500;
+        margin-bottom: 12px;
+        opacity: 90%;
+      }
+
+      h5 {
+        font-family: $font_family_roboto;
+        margin: 0;
+        font-weight: $font_500;
+      }
+    }
+  }
+
+  .actions_types {
+    justify-self: center;
+
+    h3 {
+      font-size: $font_large_medium;
+      font-family: $font_family_roboto;
+      font-weight: $font_500;
+      margin-bottom: 12px;
+      opacity: 90%;
+    }
+
+    #save_later {
+      text-decoration: underline;
+      color: $color_damage_green;
+      font-size: $font_extra_medium;
+      font-family: $font_family_roboto;
+      cursor: pointer;
+    }
+    #cart_remove {
+      margin-top: 2px;
+      text-decoration: underline;
+      color: $color_button_red;
+      font-size: $font_extra_medium;
+      font-family: $font_family_roboto;
+      cursor: pointer;
+    }
+  }
+}

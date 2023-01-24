@@ -1,0 +1,16 @@
+.cart_banner_component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h3 {
+    font-size: $font_large_medium;
+    display: flex;
+    align-items: center;
+    font-family: $font_family_roboto;
+    text-transform: uppercase;
+
+    span {
+      text-transform: lowercase;
+    }
+  }
+}

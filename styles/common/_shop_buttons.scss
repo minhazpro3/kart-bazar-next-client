@@ -43,5 +43,12 @@
     padding: 8px 2rem;
     color: $color_what_light;
     background-color: $color_damage_green;
+  } @else if $value == qty_buttons {
+    border: 0px;
+    font-size: $font_medium;
+    font-family: $font_family_poppins;
+    cursor: pointer;
+    padding: 8px 14px;
+     
   }
 }
