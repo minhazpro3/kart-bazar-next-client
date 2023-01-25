@@ -5,11 +5,12 @@
   gap: 1rem;
   .offer_bigSale_image {
     width: 100%;
-    height: 400px;
+    height: 450px;
     position: relative;
   }
 
   .apply_coupon {
+    position: relative;
     h3 {
       font-size: 30px;
       font-weight: $font_500;
@@ -32,6 +33,22 @@
       outline: none;
     }
 
+    .coupon_apply {
+      @include shop_buttons(medium);
+      position: absolute;
+      top: 68.5px;
+      right: 1.5px;
+      padding: 4.5px 1rem;
+      background-color: $color_damage_green;
+      &:hover {
+        cursor: pointer;
+        background-color: $color_button_red;
+        font-weight: $font_500;
+        margin-left: 0px;
+        transition: all 200ms ease-in;
+      }
+    }
+
     .cart_subtotal {
       display: flex;
       justify-content: space-between;
@@ -50,29 +67,41 @@
     }
     .grand_price {
       @extend .cart_subtotal;
-      text-decoration: underline;
+
       h5 {
         color: $color_black;
         font-size: $font_medium;
       }
 
-      .only_price {
-        color: $color_damage_green !important;
-        font-size: $font_medium !important;
+      #only_price {
+        color: $color_damage_green;
+        font-size: $font_medium;
       }
     }
 
-    .checkout_button_div{
-        width: 100%;
-        text-align: center;
-        background-color: $color_damage_green;
-        padding: 8px 0;
-        .checkout_button {
-            text-decoration: none;
-            font-family: $font_family_roboto;
-            font-weight: $font_500;
-            color: $color_white;
-        }
+    .hr {
+      border: 1px solid $color_black;
+      margin-bottom: 10px;
+      opacity: 50%;
+    }
+
+    .checkout_button_div {
+      width: 100%;
+      text-align: center;
+      background-color: $color_damage_green;
+      padding: 8px 0;
+      transition:all 300ms ease-in;
+      &:hover {
+        background-color: $color_button_red;
+      }
+      cursor: pointer;
+      .checkout_button {
+        font-size:$font_extra_medium;
+        text-decoration: none;
+        font-family: $font_family_roboto;
+        font-weight: $font_500;
+        color: $color_white;
+      }
     }
   }
 }

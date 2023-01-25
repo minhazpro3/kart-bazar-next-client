@@ -16,7 +16,7 @@ const Cart_grand_total = () => {
           <br />
 
           <input type="text" placeholder="Enter Coupon Code Here" required />
-
+          <button className="coupon_apply">Apply</button>
           <div className="cart_subtotal">
             <h5>Subtotal</h5>
             <h5>$30.00</h5>
@@ -34,6 +34,7 @@ const Cart_grand_total = () => {
             <h5>Total (USD)</h5>
             <h5 id="only_price">$233.00</h5>
           </div>
+          <div className="hr"> </div>
           <div className="checkout_button_div">
             <Link className="checkout_button" href="#">
               Process to checkout

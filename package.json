@@ -15,7 +15,9 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-loading-skeleton": "^3.1.0",
+    "react-redux": "^8.0.5",
     "react-simple-star-rating": "^5.1.7",
+    "redux": "^4.2.0",
     "sass": "^1.57.1",
     "scss": "^0.2.4",
     "swiper": "^8.4.5"
