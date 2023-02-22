@@ -4,72 +4,57 @@ import { RxCross2 } from "react-icons/rx";
 import { AiOutlineMenu } from "react-icons/ai";
 
 const Head_cos = () => {
-  const [show, setShow] = useState(false);
-  return (
-    <div>
-      <nav>
-        <div className="navbar">
-          <AiOutlineMenu className="bx_menu" />
+  const [showDropdown1, setShowDropdown1] = useState(false);
+  const [showDropdown2, setShowDropdown2] = useState(false);
 
-          <div className="logo">
-            {show && <span onClick={() => setShow(true)}>open</span>}
-            <a href="#">Logo </a>
-          </div>
-          <div className={`${show ? "nav_links" : "nav_links_0"}`}>
-            <div className="sidebar_logo">
-              <span>Kart Bazar</span> <RxCross2 />
-            </div>
-            <ul className="links">
-              <li>
-                <a href="#">Home</a>
+  const toggleDropdown1 = () => setShowDropdown1(!showDropdown1);
+  const toggleDropdown2 = () => setShowDropdown2(!showDropdown2);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsActive(!isActive);
+  };
+
+  return (
+    <div className="container">
+      <nav className="navbar">
+        <div className="navbar__logo">Logo</div>
+        <ul className="navbar__links">
+          <li className="navbar__link">
+            <a href="#">Home</a>
+          </li>
+          <li className="navbar__link dropdown">
+            <a href="#">Dropdown 1</a>
+            <ul className="dropdown__menu">
+              <li className="dropdown__menu-item">
+                <a href="#">Dropdown Item 1</a>
               </li>
-              <li style={{ zIndex: "21" }}>
-                <a href="#">Pages</a>
-                <MdKeyboardArrowDown className="arrow" />
-                <ul className="pages_sub_menu  sub_menu">
-                  <li>
-                    <a href="/">Home </a>
-                  </li>
-                  <li>
-                    <a href="#">About us</a>
-                  </li>
-                  <li>
-                    <a href="#">Contact us</a>
-                  </li>
-                  <li>
-                    <a href="#">Payment</a>
-                  </li>
-                </ul>
+              <li className="dropdown__menu-item">
+                <a href="#">Dropdown Item 2</a>
               </li>
-              <li style={{ marginLeft: "3px", zIndex: "20" }}>
-                <a href="#">Services</a>
-                <MdKeyboardArrowDown className="arrow" />
-                <ul className="pages_sub_menu  sub_menu">
-                  <li>
-                    <a href="#">Home </a>
-                  </li>
-                  <li>
-                    <a href="#">About us</a>
-                  </li>
-                  <li>
-                    <a href="#">Contact us</a>
-                  </li>
-                  <li>
-                    <a href="#">Payment</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-              <li>
-                <a href="#">About us</a>
+              <li className="dropdown__menu-item">
+                <a href="#">Dropdown Item 3</a>
               </li>
             </ul>
-          </div>
-          <div className="profile">Hey Md</div>
-        </div>
+          </li>
+          <li className="navbar__link dropdown">
+            <a href="#">Dropdown 2</a>
+            <ul className="dropdown__menu">
+              <li className="dropdown__menu-item">
+                <a href="#">Dropdown Item 1</a>
+              </li>
+              <li className="dropdown__menu-item">
+                <a href="#">Dropdown Item 2</a>
+              </li>
+              <li className="dropdown__menu-item">
+                <a href="#">Dropdown Item 3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </nav>
+      
     </div>
   );
 };

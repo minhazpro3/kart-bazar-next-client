@@ -1,11 +1,15 @@
 .main_banner {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: auto auto auto auto auto;
   gap: 1.5rem;
   position: relative;
 
   .banner_left {
-    grid-column: auto / span 4;
+    @include media-responsive(lg) {
+      grid-column: 12 / 1;
+    }
+    grid-column: 5 / 1;
     position: relative;
     .banner_img_left {
       position: relative;
@@ -19,9 +23,13 @@
       top: 3rem;
       left: 2.5rem;
 
-      p {
+      #offer {
         opacity: 85%;
         font-size: $font_medium;
+        font-weight: $font_600;
+        @include media-responsive(sm){
+        
+        }
       }
 
       #parseint {
@@ -67,6 +75,9 @@
   }
 
   .banner_right {
+    @include media-responsive(lg) {
+      display: none;
+    }
     position: relative;
     .banner_right_img {
       position: relative;

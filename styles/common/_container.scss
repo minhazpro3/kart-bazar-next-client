@@ -3,3 +3,17 @@
   width: 90%;
   margin: 0px auto;
 }
+
+$breakpoints: (
+  xsm: 300px,
+  sm: 540px,
+  md: 768px,
+  lg: 1024px,
+  xlg: 1240px,
+);
+
+@mixin media-responsive($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

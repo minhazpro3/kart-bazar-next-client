@@ -1,57 +1,35 @@
 import React, { useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Header = () => {
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleSidebarToggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <div>
-      <div className="header">
-        <div className="logo-container">
-          <h3 className="logo">Logo</h3>
-        </div>
-
-        <div className="nav_links">
-          <ul className={click ? "nav-options active" : "nav-options"}>
-            <li className="option" onClick={closeMobileMenu}>
-              <a href="#">ABOUT</a>
-            </li>
-            <li className="option" onClick={closeMobileMenu}>
-              <a href="#">CONTACT</a>
-            </li>
-            <li className="option" onClick={closeMobileMenu}>
-              <a href="#">BLOG</a>
-            </li>
-            <li className="option mobile-option" onClick={closeMobileMenu}>
-              <a href="#">SIGN-IN</a>
-            </li>
-            <li className=" option mobile-option" onClick={closeMobileMenu}>
-              <a href="" className="sign-up">
-                SIGN-UP
-              </a>
-            </li>
-          </ul>
-        </div>
-        {/* <ul className="signin-up">
-          <li className="sign-in" onClick={closeMobileMenu}>
-            <a href="#">SIGN-IN</a>
+    <>
+      <div className={`sidebar ${isOpen ? "open" : ""}`}>
+        <ul>
+          <li>Menu Item 1</li>
+          <li className="has-dropdown">
+            <span>Menu Item 2</span>
+            <ul>
+              <li>Submenu Item 1</li>
+              <li>Submenu Item 2</li>
+              <li>Submenu Item 3</li>
+            </ul>
           </li>
-          <li onClick={closeMobileMenu}>
-            <a href="" className="signup-btn">
-              SIGN-UP
-            </a>
-          </li>
-        </ul> */}
-
-        <div className="mobile-menu" onClick={handleClick}>
-          {click ? (
-            <p className="menu-icon">Menu Icon</p>
-          ) : (
-            <p className="menu-icon">Menu Icon</p>
-          )}
-        </div>
+          <li>Menu Item 3</li>
+        </ul>
       </div>
-    </div>
+      <button
+        className={`${isOpen ? "sidebar-toggle" : "close_menu"}`}
+        onClick={handleSidebarToggle}
+      >
+        <AiOutlineMenu />
+      </button>
+    </>
   );
 };
 

@@ -16,7 +16,7 @@ const Banner = () => {
           />
         </div>
         <div className="banner_text_left">
-          <p>
+          <p id="offer">
             Exclusive offer<span id="parseint"> 30% Off</span>
           </p>
           <h2>
