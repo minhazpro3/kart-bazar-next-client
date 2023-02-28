@@ -9,7 +9,7 @@ import Product from "./Product";
 import Surety from "./Surety";
 import TopProducts from "./TopProducts";
 import Head_cos from "./../share/Head_cos";
-import Header from "../share/Header";
+import Sidebar from "./../share/Sidebar";
 
 const Home = () => {
   return (
@@ -28,7 +28,7 @@ const Home = () => {
         <Delivery />
         <Surety /> */}
       </div>
-      <Header />
+      <Sidebar />
       {/* <div style={{ backgroundColor: "#051616" }}>
         <Footer />
       </div> */}

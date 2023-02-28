@@ -222,14 +222,11 @@
 // }
 
 .container {
-  @include container;
-
   .navbar {
     display: flex;
     align-items: center;
-    @include media-responsive(md) {
+    @include media-responsive(sm) {
       display: none;
-      justify-content: center;
     }
     justify-content: space-between;
     padding: 1rem;
@@ -252,6 +249,7 @@
       & .navbar__link {
         margin-left: 2rem;
         position: relative;
+        list-style: none;
 
         & a {
           text-decoration: none;
@@ -276,14 +274,18 @@
           & .dropdown__menu-item {
             margin: 0;
             padding: 0.5rem;
+            list-style: none;
+            &:hover {
+              background-color: $color_gray_dark;
+            }
 
             & a {
               text-decoration: none;
               color: #333;
 
-              &:hover {
-                text-decoration: underline;
-              }
+              // &:hover {
+              //   text-decoration: underline;
+              // }
             }
           }
         }
