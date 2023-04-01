@@ -28,14 +28,14 @@ const Sidebar = () => {
         <div>
           {!isOpen ? (
             <button
-              className={`${isOpen ? "sidebar-toggle" : "close_menu"}`}
+              className={`${isOpen ? " " : "close_menu"}`}
               onClick={handleSidebarToggle}
             >
               <AiOutlineMenu />
             </button>
           ) : (
             <button
-              className={`${isOpen ? "sidebar-toggle" : "close_menu"}`}
+              className={`${isOpen ? "sidebar-toggle" : " "}`}
               onClick={handleSidebarToggle}
             >
               <RxCross1 />

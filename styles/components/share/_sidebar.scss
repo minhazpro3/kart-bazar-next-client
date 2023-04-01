@@ -9,8 +9,8 @@
   .sidebar {
     position: fixed;
     top: 48px;
-    left: -250px;
-    width: 250px;
+    left: -200px;
+    width: 200px;
     height: 100%;
     background-color: #717bec;
     transition: all 0.3s ease;
@@ -70,10 +70,10 @@
     height: 48px;
 
     .sidebar-toggle {
-      position: fixed;
-      top: 10px;
-      left: 130px;
-      padding: 8px 8px 5px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 8px 8px 8px;
       background-color: #c13131;
       border: none;
       color: #fff;
@@ -96,7 +96,6 @@
       color: #fff;
       font-size: 1.2rem;
       cursor: pointer;
-      margin-left: 10px;
     }
     h2 {
       font-size: $font_large;
