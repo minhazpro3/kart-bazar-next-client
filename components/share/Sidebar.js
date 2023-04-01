@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { RxCross1 } from "react-icons/rx";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,12 +26,21 @@ const Sidebar = () => {
       </div>
       <div className="mobile_nav">
         <div>
-          <button
-            className={`${isOpen ? "sidebar-toggle" : "close_menu"}`}
-            onClick={handleSidebarToggle}
-          >
-            <AiOutlineMenu />
-          </button>
+          {!isOpen ? (
+            <button
+              className={`${isOpen ? "sidebar-toggle" : "close_menu"}`}
+              onClick={handleSidebarToggle}
+            >
+              <AiOutlineMenu />
+            </button>
+          ) : (
+            <button
+              className={`${isOpen ? "sidebar-toggle" : "close_menu"}`}
+              onClick={handleSidebarToggle}
+            >
+              <RxCross1 />
+            </button>
+          )}
         </div>
         <h2>
           KART <span>BAZAR</span>
