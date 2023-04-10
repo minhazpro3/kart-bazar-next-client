@@ -14,13 +14,12 @@ import Sidebar from "./../share/Sidebar";
 const Home = () => {
   return (
     <div>
-      <div>
+      <div className="head_home">
         <Head_cos />
       </div>
 
       <div className="container_home">
-        {/* <Banner /> */}
-
+        <Banner />
         {/* <Category />
         <Product />
         <TopProducts />

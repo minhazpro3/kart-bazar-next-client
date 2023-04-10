@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
+import { CgProfile } from "react-icons/cg";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +47,7 @@ const Sidebar = () => {
           KART <span>BAZAR</span>
         </h2>
         <div className="nav_profile">
-          <h6>Profile</h6>
+         <CgProfile/>
         </div>
       </div>
     </div>

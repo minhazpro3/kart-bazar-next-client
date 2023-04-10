@@ -254,6 +254,7 @@
         & a {
           text-decoration: none;
           color: #333;
+          font-family: $font_family_poppins;
         }
 
         &.dropdown:hover .dropdown__menu {
@@ -282,6 +283,7 @@
             & a {
               text-decoration: none;
               color: #333;
+              font-family: $font_family_poppins;
 
               // &:hover {
               //   text-decoration: underline;

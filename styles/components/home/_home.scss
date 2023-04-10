@@ -1,3 +1,8 @@
+.head_home {
+  z-index: 20;
+}
+
 .container_home {
   @include container;
+  z-index: 10;
 }

@@ -44,10 +44,7 @@ const Banner = () => {
             45% <span id="off">OFF</span>
           </h2>
           <h2 className="refresh">Real Refresement</h2>
-          <h5 className="week_deal">
-            Only this week,
-            <br /> Don't miss..
-          </h5>
+          <h5 className="week_deal">Only this week, Don't miss..</h5>
           <button className="shop_right_button">Shop &#8594;</button>
         </div>
       </div>

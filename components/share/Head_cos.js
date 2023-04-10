@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import { AiOutlineMenu } from "react-icons/ai";
+import { CgProfile } from "react-icons/cg";
 
 const Head_cos = () => {
   const [showDropdown1, setShowDropdown1] = useState(false);
@@ -52,9 +53,12 @@ const Head_cos = () => {
               </li>
             </ul>
           </li>
+           <li>
+          <CgProfile />
+        </li>
         </ul>
+       
       </nav>
-      
     </div>
   );
 };
