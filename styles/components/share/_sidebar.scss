@@ -72,6 +72,7 @@
     width: 100%;
     position: absolute;
     top: 0;
+     
 
     .sidebar-toggle {
       display: flex;
@@ -104,7 +105,8 @@
     h2 {
       font-size: $font_large;
       @include media-responsive(sm) {
-        font-size: $font_large_large;
+        font-size: $font_large;
+        color: $color_gray;
       }
       font-family: $font_family_poppins;
     }

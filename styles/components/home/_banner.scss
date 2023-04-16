@@ -4,6 +4,7 @@
   @include media-responsive(sm) {
     position: relative;
     top: 3rem;
+    
   }
   grid-template-columns: auto auto auto auto auto;
   gap: 1.5rem;

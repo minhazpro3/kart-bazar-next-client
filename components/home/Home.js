@@ -20,12 +20,12 @@ const Home = () => {
 
       <div className="container_home">
         <Banner />
-        {/* <Category />
+        <Category />
         <Product />
-        <TopProducts />
-        <Bank_offer />
-        <Delivery />
-        <Surety /> */}
+        {/* <TopProducts /> */}
+        {/* <Bank_offer /> */}
+        {/* <Delivery /> */}
+        {/* <Surety /> */}
       </div>
       <Sidebar />
       {/* <div style={{ backgroundColor: "#051616" }}>

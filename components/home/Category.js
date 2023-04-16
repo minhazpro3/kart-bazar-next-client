@@ -73,8 +73,8 @@ const Category = () => {
             spaceBetween: 15,
           },
         }}
-        slidesPerView={1}
-        spaceBetween={15}
+        slidesPerView={2}
+        spaceBetween={10}
         loop={true}
         autoplay={{
           delay: 4000,

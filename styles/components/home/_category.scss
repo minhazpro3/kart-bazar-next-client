@@ -1,4 +1,8 @@
 .category_div {
+  margin: 20px 0px;
+  @include media-responsive(sm) {
+    margin: 3rem 0;
+  }
   .swiper-slide {
     display: flex;
     justify-content: center !important;
@@ -9,6 +13,10 @@
     border-bottom: 2px solid $color_damage_green;
     padding-bottom: 5px;
     opacity: 75%;
+    font-size: $font_small_heading;
+    @include media-responsive(sm) {
+      font-size: $font_large_medium;
+    }
     display: inline-block;
     font-family: $font_family_poppins;
   }
@@ -30,6 +38,10 @@
       .category_image {
         width: 90px;
         height: 90px;
+        @include media-responsive(sm) {
+          width: 60px;
+          height: 60px;
+        }
         position: relative;
       }
     }
