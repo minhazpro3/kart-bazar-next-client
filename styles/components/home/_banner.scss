@@ -1,9 +1,12 @@
 .main_banner {
   display: grid;
   // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  @include media-responsive(sm) {
+    position: relative;
+    top: 3rem;
+  }
   grid-template-columns: auto auto auto auto auto;
   gap: 1.5rem;
-  position: relative;
 
   .banner_left {
     @include media-responsive(lg) {
@@ -52,6 +55,9 @@
         opacity: 100% !important;
         font-weight: $font_600;
         padding: 6px 10px;
+        @include media-responsive(sm) {
+          padding: 4px 10px;
+        }
         margin: 0px 12px;
         border-radius: 20px;
       }

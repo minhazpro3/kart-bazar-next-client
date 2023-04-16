@@ -30,6 +30,7 @@ const Banner = () => {
           <button className="shop_now">Shop Now &#8594;</button>
         </div>
       </div>
+      
       <div className="banner_right">
         <div className="banner_img_right">
           <Image
