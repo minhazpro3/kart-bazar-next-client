@@ -7,29 +7,54 @@ h5 {
   .filter_banner {
     width: 100%;
     height: 400px;
+    @include media-responsive(md) {
+      height: 300px;
+      @include media-responsive(sm) {
+        height: 200px;
+      }
+    }
     position: relative;
     margin: 10px 0px;
   }
 
   .banner_text {
     position: absolute;
-    top: 25%;
+    top: 32%;
+    @include media-responsive(sm) {
+      top: 10%;
+    }
     left: 40%;
     font-size: $font_large_large;
     font-family: $font_family_roboto;
 
     h2 {
       font-size: $font_large_large_large_heading;
+      @include media-responsive(lg) {
+        font-size: $font_extra_small_heading;
+        @include media-responsive(md) {
+          font-size: $font_large_large;
+          @include media-responsive(sm) {
+            font-size: $font_extra_large;
+            margin-bottom: 2px;
+          }
+        }
+      }
       display: inline-block;
       max-width: 70%;
       font-family: $font_family_roboto;
       margin-bottom: 10px;
+
       opacity: 75%;
     }
     h3 {
       font-size: $font_large_medium;
+
       opacity: 60%;
       margin-bottom: 10px;
+      @include media-responsive(sm) {
+        font-size: $font_large_small;
+        margin: 4px 0;
+      }
       span {
         color: $color_button_red;
         font-weight: $font_600;
@@ -42,12 +67,20 @@ h5 {
       .search_icon {
         position: absolute;
         top: 15px;
-        left: 45%;
+        left: 60%;
+        @include media-responsive(md) {
+          display: none;
+        }
         font-size: $font_large_medium;
         color: $color_gray;
       }
       .input {
-        width: 50%;
+        width: 67%;
+        @include media-responsive(md) {
+          width: 50%;
+          padding: 6px 7px;
+          font-size: $font_extra_medium;
+        }
         padding: 10px 8px;
         font-size: $font_large_medium;
         border: 2px solid $color_damage_green;
@@ -76,7 +109,11 @@ h5 {
     }
   }
   .filter_by_etc {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include media-responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
     gap: 4px;
     select {
       border: none;
@@ -85,6 +122,9 @@ h5 {
       padding: 8px 14px;
       outline: none;
       font-size: $font_extra_medium;
+      @include media-responsive(sm) {
+        font-size: $font_large_small;
+      }
       border-radius: 5px;
     }
   }
