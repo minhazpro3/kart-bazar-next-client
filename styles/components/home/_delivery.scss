@@ -1,6 +1,9 @@
 .delivery_cart_component {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  @include media-responsive(md) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   gap: 1rem;
   align-items: center;
   margin: 2rem 0px;
@@ -17,11 +20,19 @@
       top: 5rem;
       left: 45%;
       position: absolute;
+      @include media-responsive(sm) {
+        padding-right: 1rem;
+        top: 4rem;
+        left: 45%;
+      }
       h3 {
         font-size: $font_large_large;
         font-family: $font_family_roboto;
         color: $color_gray_dark;
         margin-bottom: 10px;
+        @include media-responsive(sm) {
+          font-size: $font_extra_large;
+        }
       }
       h6 {
         font-size: $font_medium;
@@ -45,6 +56,9 @@
       .delivery_more_button {
         @include shop_buttons(more_deliver);
         margin-top: 2.5rem;
+        @include media-responsive(sm) {
+          margin-top: 1rem;
+        }
       }
     }
   }

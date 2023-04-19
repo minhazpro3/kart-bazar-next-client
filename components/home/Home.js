@@ -24,7 +24,7 @@ const Home = () => {
         <Product />
         <TopProducts />
         <Bank_offer />
-        {/* <Delivery /> */}
+        <Delivery />
         {/* <Surety /> */}
       </div>
       <Sidebar />
