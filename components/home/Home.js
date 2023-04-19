@@ -28,9 +28,9 @@ const Home = () => {
         <Surety />
       </div>
       <Sidebar />
-      {/* <div style={{ backgroundColor: "#051616" }}>
+      <div style={{ backgroundColor: "#051616" }}>
         <Footer />
-      </div> */}
+      </div>
     </div>
   );
 };
