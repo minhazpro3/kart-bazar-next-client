@@ -5,6 +5,9 @@ h1 {
   opacity: 75%;
   display: inline-block;
   font-family: $font_family_poppins;
+  @include media-responsive(lg) {
+    font-size: $font_extra_large;
+  }
 }
 
 .recently_added_cart {
@@ -44,11 +47,11 @@ h1 {
       font-size: $font_extra_medium;
       color: $color_damage_green;
       font-weight: $font_600;
-      margin: 0px 12px;
+      margin: 0px 10px 0 0;
       font-family: $font_family_roboto;
     }
     .rating {
-      margin: 5px 0px 2px -12px;
+      margin: 0 0 0 0px;
     }
     .rated_cart_button {
       margin-top: 0px !important;

@@ -22,7 +22,7 @@ const Home = () => {
         <Banner />
         <Category />
         <Product />
-        {/* <TopProducts /> */}
+        <TopProducts />
         {/* <Bank_offer /> */}
         {/* <Delivery /> */}
         {/* <Surety /> */}
