@@ -1,23 +1,30 @@
 .bank_offer_cart {
   h1 {
-  margin-top: 1.5rem;
-  border-bottom: 2px solid $color_damage_green;
-  padding-bottom: 5px;
-  opacity: 75%;
-  display: inline-block;
-  font-family: $font_family_poppins;
-}
+    margin-top: 1.5rem;
+    border-bottom: 2px solid $color_damage_green;
+    padding-bottom: 5px;
+    opacity: 75%;
+    display: inline-block;
+    font-family: $font_family_poppins;
+  }
   .offer_cart_component {
     margin: 1rem 0px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    @include media-responsive(md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     gap: 1rem;
 
     .offer_cart_child {
       background-color: $color_what_light;
       padding-top: 2.5rem;
       border-radius: 20px;
+
       .offer_cart {
+        @include media-responsive(sm) {
+          padding: 1rem;
+        }
         .offer_cart_text_image {
           display: flex;
           justify-content: space-around;
@@ -39,11 +46,17 @@
               font-family: $font_family_roboto;
               font-size: $font_large_large;
               color: $color_button_red;
+              @include media-responsive(sm) {
+                font-size: $font_large_medium;
+              }
             }
             .right_offer {
               font-family: $font_family_roboto;
               font-size: $font_large_large;
               color: $color_damage_green;
+              @include media-responsive(sm) {
+                font-size: $font_large_medium;
+              }
             }
             .invest {
               font-family: $font_family_roboto;
@@ -65,6 +78,10 @@
               opacity: 75%;
               margin-top: 3rem;
               margin-bottom: 14px;
+              @include media-responsive(sm) {
+                margin-top: 1rem;
+                margin-bottom: 8px;
+              }
             }
           }
 
@@ -87,6 +104,9 @@
           font-family: $font_family_roboto;
           font-weight: $font_500;
           margin: 0px 5px;
+          @include media-responsive(sm) {
+            font-size: $font_extra_medium;
+          }
         }
       }
       .offer_cart_footer_right {
@@ -101,6 +121,9 @@
           font-family: $font_family_roboto;
           font-weight: $font_500;
           margin: 0px 5px;
+          @include media-responsive(sm) {
+            font-size: $font_extra_medium;
+          }
         }
       }
     }
