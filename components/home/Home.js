@@ -25,7 +25,7 @@ const Home = () => {
         <TopProducts />
         <Bank_offer />
         <Delivery />
-        {/* <Surety /> */}
+        <Surety />
       </div>
       <Sidebar />
       {/* <div style={{ backgroundColor: "#051616" }}>

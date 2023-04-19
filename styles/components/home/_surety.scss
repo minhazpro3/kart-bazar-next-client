@@ -1,6 +1,15 @@
 .surety_cart {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  @include media-responsive(lg) {
+    grid-template-columns: repeat(2, 1fr);
+    @include media-responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media-responsive(sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
   gap: 14px;
   margin: 1rem 0px;
 
