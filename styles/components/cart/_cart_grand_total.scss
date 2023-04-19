@@ -1,16 +1,25 @@
 .grand_total_component {
+  margin: 16px 0px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @include media-responsive(md) {
+    grid-template-columns: 1fr;
+  }
   align-items: center;
   gap: 1rem;
   .offer_bigSale_image {
     width: 100%;
     height: 450px;
+    @include media-responsive(sm) {
+      width: 100%;
+      height: 400px;
+    }
     position: relative;
   }
 
   .apply_coupon {
     position: relative;
+
     h3 {
       font-size: 30px;
       font-weight: $font_500;
@@ -90,13 +99,13 @@
       text-align: center;
       background-color: $color_damage_green;
       padding: 8px 0;
-      transition:all 300ms ease-in;
+      transition: all 300ms ease-in;
       &:hover {
         background-color: $color_button_red;
       }
       cursor: pointer;
       .checkout_button {
-        font-size:$font_extra_medium;
+        font-size: $font_extra_medium;
         text-decoration: none;
         font-family: $font_family_roboto;
         font-weight: $font_500;

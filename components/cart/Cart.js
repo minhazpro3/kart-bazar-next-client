@@ -5,6 +5,7 @@ import Cart_product from "./Cart_product";
 import Cart_products from "./Cart_products";
 import Footer from "./../share/Footer";
 import { useSelector } from "react-redux";
+import Head_cos from "../share/Head_cos";
 
 const Cart = () => {
   const state = useSelector((state) => state);
@@ -22,6 +23,8 @@ const Cart = () => {
         <Cart_product />
         <Cart_product />
         <Cart_product />
+      </div>
+      <div className="cart_main_components" style={{ overflowX: "hidden" }}>
         <Cart_grand_total />
       </div>
       <div style={{ backgroundColor: "#051616" }}>

@@ -11,5 +11,8 @@
 }
 
 .cart_main_components {
+  padding: 4rem 0 !important;
   @include container;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
 }
