@@ -53,11 +53,10 @@ const Head_cos = () => {
               </li>
             </ul>
           </li>
-           <li>
-          <CgProfile />
-        </li>
+          <li className="profile_logo">
+            <CgProfile size={25} />
+          </li>
         </ul>
-       
       </nav>
     </div>
   );
