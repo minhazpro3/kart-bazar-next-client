@@ -1,51 +1,72 @@
 .container_signup_component {
+  display: flex;
+  justify-content: center;
   .signup_component {
     @include container;
 
-    .input_group {
-      position: relative;
-      margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    align-content: center;
 
-      input {
+    .signup_img {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      @include media-responsive(md) {
+        display: none;
+      }
+    }
+    .inputs_group {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      .input_group {
+        position: relative;
+        margin: 20px 0;
+
+        input {
+          width: 320px;
+          height: 40px;
+          font-size: $font_extra_medium;
+          padding: 0 10px;
+          background: transparent;
+          border: 1px solid #333;
+          outline: none;
+          border-radius: 6px;
+        }
+
+        label {
+          position: absolute;
+          top: 50%;
+          left: 8px;
+          padding: 2px 4px;
+          transform: translateY(-50%);
+          pointer-events: none;
+          transition: 0.5s;
+        }
+        input:focus ~ label {
+          top: 0;
+          font-size: $font_small;
+          background: $color_white;
+        }
+      }
+      .terms_condition {
+        margin: -12px 0 13px;
+        label input {
+          font-size: $font_large_small;
+          accent-color: $color_button_background_slow_red;
+          color: $color_white;
+        }
+      }
+
+      .button {
+        position: relative;
+        top: 0;
+        left: 0;
         width: 320px;
         height: 40px;
-        font-size: $font_extra_medium;
-        padding: 0 10px;
-        background: transparent;
-        border: 1px solid #333;
-        outline: none;
-        border-radius: 6px;
       }
-
-      label {
-        position: absolute;
-        top: 50%;
-        left: 8px;
-        transform: translateY(-50%);
-        pointer-events: none;
-        transition: 0.5s;
-      }
-      input:focus ~ label {
-        top: 0;
-        font-size: $font_small;
-        background: $color_white;
-      }
-    }
-    .terms_condition {
-      margin: -12px 0 13px;
-      label input {
-        font-size: $font_large_small;
-        accent-color: $color_button_background_slow_red;
-        color: $color_white;
-      }
-    }
-
-    .button {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 40px;
     }
   }
 }
