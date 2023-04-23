@@ -3,6 +3,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import { AiOutlineMenu } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
+import Link from "next/link";
 
 const Head_cos = () => {
   const [showDropdown1, setShowDropdown1] = useState(false);
@@ -23,33 +24,27 @@ const Head_cos = () => {
         <div className="navbar__logo">Logo</div>
         <ul className="navbar__links">
           <li className="navbar__link">
-            <a href="#">Home</a>
+            <Link href="/"> Home </Link>
           </li>
           <li className="navbar__link dropdown">
-            <a href="#">Dropdown 1</a>
+            <li>Services</li>
             <ul className="dropdown__menu">
               <li className="dropdown__menu-item">
-                <a href="#">Dropdown Item 1</a>
-              </li>
-              <li className="dropdown__menu-item">
-                <a href="#">Dropdown Item 2</a>
-              </li>
-              <li className="dropdown__menu-item">
-                <a href="#">Dropdown Item 3</a>
+                <Link href="shop"> Shop</Link>
               </li>
             </ul>
           </li>
           <li className="navbar__link dropdown">
-            <a href="#">Dropdown 2</a>
+            <a href="#">About us</a>
             <ul className="dropdown__menu">
               <li className="dropdown__menu-item">
-                <a href="#">Dropdown Item 1</a>
+                <a href="#">Contact</a>
               </li>
               <li className="dropdown__menu-item">
-                <a href="#">Dropdown Item 2</a>
+                <a href="#">Careers</a>
               </li>
               <li className="dropdown__menu-item">
-                <a href="#">Dropdown Item 3</a>
+                <a href="#">Our team</a>
               </li>
             </ul>
           </li>
