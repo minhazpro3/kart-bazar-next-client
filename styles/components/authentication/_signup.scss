@@ -25,8 +25,7 @@
     .inputs_group {
       display: flex;
       justify-content: center;
-      background: $color_gray_white;
-      padding: 16px 16px;
+
       .form_title {
         h2 {
           font-family: $font_family_poppins;
@@ -76,8 +75,15 @@
         margin: -12px 0 13px;
         label input {
           font-size: $font_large_small;
-          accent-color: $color_button_background_slow_red;
-          color: $color_white;
+          accent-color: $color_damage_green;
+        }
+        label {
+          font-size: $font_large_small;
+          font-family: $font_family_poppins;
+          font-weight: $font_500;
+          span {
+            color: $color_damage_green;
+          }
         }
       }
 
@@ -87,6 +93,53 @@
         left: 0;
         width: 320px;
         height: 40px;
+        cursor: pointer;
+        background: $color_button_red;
+        color: $color_white;
+        border: none;
+        &:hover {
+          background: $color_damage_green;
+        }
+      }
+    }
+    .third_auth {
+      ul {
+        margin: 13px 0;
+        position: relative;
+        hr {
+          width: 320px;
+        }
+        span {
+          transform: translateX(-50%);
+          top: -8px;
+          left: 50%;
+          background: $color_white;
+          padding: 1px 4px;
+          position: absolute;
+        }
+      }
+      .third_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        height: 40px;
+        cursor: pointer;
+        background: $color_white;
+        color: $color_black;
+        border: 1px solid $color_damage_green;
+        font-size: $font_extra_medium;
+        font-weight: $font_500;
+        margin: 10px 0;
+        &:hover {
+          background: $color_damage_green;
+          color: $color_white;
+        }
+      }
+      h5 {
+        span {
+          color: $color_damage_green;
+        }
       }
     }
   }
