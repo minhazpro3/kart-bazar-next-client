@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import { CgProfile } from "react-icons/cg";
+import Link from "next/link";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,11 +14,13 @@ const Sidebar = () => {
     <div className="sidebarMain">
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <ul>
-          <li>Menu Item 1</li>
+          <li>Item</li>
           <li className="has-dropdown">
-            <span>Menu Item 2</span>
+            <span>Pages</span>
             <ul>
-              <li>Submenu Item 1</li>
+              <li>
+                <Link href="/auth/signin">Login</Link>
+              </li>
               <li>Submenu Item 2</li>
               <li>Submenu Item 3</li>
             </ul>
@@ -47,7 +50,7 @@ const Sidebar = () => {
           KART <span>BAZAR</span>
         </h2>
         <div className="nav_profile">
-         <CgProfile/>
+          <CgProfile />
         </div>
       </div>
     </div>

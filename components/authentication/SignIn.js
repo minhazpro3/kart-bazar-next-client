@@ -8,7 +8,7 @@ import { FcGoogle } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";
 import Link from "next/link";
 
-const SignUp = () => {
+const SignIn = () => {
   const {
     register,
     handleSubmit,
@@ -48,25 +48,10 @@ const SignUp = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="form_title">
                     <h2>Welcome To Kart Bazar</h2>
-                    <h5>Create a new account</h5>
+                    <h5>Sign in your account</h5>
                   </div>
                   {/* input group 1 */}
-                  <div className="input_group">
-                    <input
-                      {...register("name", {
-                        required: true,
-                        maxLength: 20,
-                      })}
-                      name="name"
-                      required
-                      aria-invalid={errors.firstName ? "true" : "false"}
-                    />
-                    {/* {errors.firstName?.type === "required" && (
-                <p role="alert">First name is required</p>
-              )} */}
-                    <label for="name">Full Name</label>
-                  </div>
-                  {/* input group 2 */}
+                  
                   <div className="input_group">
                     <input
                       {...register("email", { pattern: /^[A-Za-z]+$/i })}
@@ -85,17 +70,8 @@ const SignUp = () => {
                     />
                     <label for="password">Password</label>
                   </div>
-                  {/* input group 4 */}
-                  <div className="input_group">
-                    <input
-                      type="password"
-                      {...register("age", { min: 18, max: 99 })}
-                      name="confirm password"
-                      required
-                    />
-                    <label for="confirm password">Confirm Password</label>
-                  </div>
-                  {/* input group 5 */}
+
+                  {/* terms & condition */}
                   <div className="terms_condition">
                     <label>
                       <input
@@ -106,32 +82,23 @@ const SignUp = () => {
                       I agree with <span>Terms</span> and <span>Privacy</span>
                     </label>
                   </div>
+                  {/* signin button */}
                   <input type="submit" className="button" value="Signup" />
                 </form>
               </div>
+              {/*  */}
               <div style={{ display: "flex", justifyContent: "center" }}>
                 <div className="third_auth">
                   <ul>
                     <hr />
                     <span>OR</span>
                   </ul>
-                  <button className="third_button">
-                    {" "}
-                    <FcGoogle style={{ margin: "0 6px " }} /> Sign up with
-                    Google{" "}
-                  </button>
-                  <button className="third_button">
-                    {" "}
-                    <BsFacebook
-                      style={{ margin: "0 6px ", color: "blue" }}
-                    />{" "}
-                    Sign up with Facebook{" "}
-                  </button>
+
                   <h5>
-                    Already have an account?
+                    If you new user?
                     <span>
                       {" "}
-                      <Link href="/auth/signin">Login</Link>
+                      <Link href="/auth/signup">Signup</Link>
                     </span>
                   </h5>
                 </div>
@@ -147,4 +114,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignIn;
