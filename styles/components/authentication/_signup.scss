@@ -1,8 +1,12 @@
 .container_signup_component {
-  display: flex;
-  justify-content: center;
+  margin: 20px 0;
   .signup_component {
     @include container;
+
+    @include media-responsive(md) {
+      display: flex;
+      justify-content: center;
+    }
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -11,8 +15,9 @@
 
     .signup_img {
       position: relative;
-      width: 100%;
-      height: 350px;
+      width: 75%;
+      height: 400px;
+
       @include media-responsive(md) {
         display: none;
       }
@@ -20,7 +25,16 @@
     .inputs_group {
       display: flex;
       justify-content: center;
-      justify-items: center;
+      background: $color_gray_white;
+      padding: 16px 16px;
+      .form_title {
+        h2 {
+          font-family: $font_family_poppins;
+        }
+        h5 {
+          font-family: $font_family_poppins;
+        }
+      }
       .input_group {
         position: relative;
         margin: 20px 0;
@@ -30,10 +44,13 @@
           height: 40px;
           font-size: $font_extra_medium;
           padding: 0 10px;
-          background: transparent;
-          border: 1px solid #333;
+          background: $color_white;
+          border: 1px solid $color_gray_dark;
           outline: none;
           border-radius: 6px;
+          &:focus {
+            border: 1px solid $color_damage_green;
+          }
         }
 
         label {
@@ -44,11 +61,15 @@
           transform: translateY(-50%);
           pointer-events: none;
           transition: 0.5s;
+          opacity: 75%;
         }
+
+        input:valid ~ label,
         input:focus ~ label {
           top: 0;
           font-size: $font_small;
           background: $color_white;
+          opacity: 100%;
         }
       }
       .terms_condition {

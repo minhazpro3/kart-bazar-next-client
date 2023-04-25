@@ -2,6 +2,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Head_cos from "./../share/Head_cos";
 import Image from "next/image";
+import Cart_banner from "../cart/Cart_banner";
+import Footer from "./../share/Footer";
 
 const SignUp = () => {
   const {
@@ -13,49 +15,79 @@ const SignUp = () => {
   return (
     <div>
       <Head_cos />
+      <div className="cart_main_banner">
+        <div className="cart_main_banner_container">
+          <Cart_banner />
+        </div>
+      </div>
+
       <div className="container_signup_component">
         <div>
           <div className="signup_component">
-            <div className="signup_img">
-              <Image
-                src="https://i.ibb.co/mX3wQDJ/sign-up.png"
-                alt="signup"
-                fill
-              />
+            {/* signup image */}
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <div className="signup_img">
+                <Image
+                  src="https://i.ibb.co/mX3wQDJ/sign-up.png"
+                  alt="signup"
+                  fill
+                />
+              </div>
             </div>
+
+            {/* signup form */}
             <div className="inputs_group">
               <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="form_title">
+                  <h2>Welcome To Kart Bazar</h2>
+                  <h5>Create a new account</h5>
+                </div>
+                {/* input group 1 */}
                 <div className="input_group">
                   <input
-                    {...register("firstName", {
+                    {...register("name", {
                       required: true,
                       maxLength: 20,
                     })}
+                    name="name"
+                    required
                     aria-invalid={errors.firstName ? "true" : "false"}
                   />
                   {/* {errors.firstName?.type === "required" && (
                 <p role="alert">First name is required</p>
               )} */}
-                  <label>Full Name</label>
+                  <label for="name">Full Name</label>
                 </div>
-                <div className="input_group">
-                  <input {...register("email", { pattern: /^[A-Za-z]+$/i })} />
-                  <label>Email Address</label>
-                </div>
+                {/* input group 2 */}
                 <div className="input_group">
                   <input
-                    type="number"
-                    {...register("age", { min: 18, max: 99 })}
+                    {...register("email", { pattern: /^[A-Za-z]+$/i })}
+                    name="email"
+                    required
                   />
-                  <label>Password</label>
+                  <label for="email">Email Address</label>
                 </div>
+                {/* input group 3 */}
                 <div className="input_group">
                   <input
-                    type="number"
+                    type="password"
                     {...register("age", { min: 18, max: 99 })}
+                    name="password"
+                    required
                   />
-                  <label>Confirm Password</label>
+                  <label for="password">Password</label>
                 </div>
+                {/* input group 4 */}
+                <div className="input_group">
+                  <input
+                    type="password"
+                    {...register("age", { min: 18, max: 99 })}
+                    name="confirm password"
+                    required
+                  />
+                  <label for="confirm password">Confirm Password</label>
+                </div>
+                {/* input group 5 */}
                 <div className="terms_condition">
                   <label>
                     <input type="checkbox" required /> I agree with Terms and
@@ -67,6 +99,9 @@ const SignUp = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div style={{ backgroundColor: "#051616" }}>
+        <Footer />
       </div>
     </div>
   );

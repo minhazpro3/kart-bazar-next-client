@@ -27,10 +27,19 @@ const Head_cos = () => {
             <Link href="/"> Home </Link>
           </li>
           <li className="navbar__link dropdown">
-            <li>Services</li>
+            <li>Pages</li>
             <ul className="dropdown__menu">
               <li className="dropdown__menu-item">
                 <Link href="shop"> Shop</Link>
+              </li>
+              <li className="dropdown__menu-item">
+                <Link href="cart"> cart</Link>
+              </li>
+              <li className="dropdown__menu-item">
+                <Link href="shop"> login</Link>
+              </li>
+              <li className="dropdown__menu-item">
+                <Link href="auth/signup"> Register</Link>
               </li>
             </ul>
           </li>

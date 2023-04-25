@@ -4,6 +4,9 @@
   align-items: center;
   h3 {
     font-size: $font_large_medium;
+    @include media-responsive(sm) {
+      font-size: $font_extra_medium;
+    }
     display: flex;
     align-items: center;
     font-family: $font_family_roboto;
