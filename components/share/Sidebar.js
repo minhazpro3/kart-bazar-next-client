@@ -28,7 +28,7 @@ const Sidebar = () => {
           <li>Menu Item 3</li>
         </ul>
       </div>
-      <div className="mobile_nav">
+      <div className={`${isOpen==true?"mobile_nav_fixed":"mobile_nav"}`}>
         <div>
           {!isOpen ? (
             <button
