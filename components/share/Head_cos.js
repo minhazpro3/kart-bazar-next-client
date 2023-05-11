@@ -27,33 +27,31 @@ const Head_cos = () => {
             <Link href="/"> Home </Link>
           </li>
           <li className="navbar__link dropdown">
-            <li>Pages</li>
+            <li  >Pages</li>
             <ul className="dropdown__menu">
               <li className="dropdown__menu-item">
-                <Link href="shop"> Shop</Link>
+                <Link className="link" href="shop"> Shop</Link>
               </li>
               <li className="dropdown__menu-item">
-                <Link href="cart"> cart</Link>
+                <Link className="link" href="cart"> cart</Link>
               </li>
+               
               <li className="dropdown__menu-item">
-                <Link href="shop"> login</Link>
-              </li>
-              <li className="dropdown__menu-item">
-                <Link href="auth/signup"> Register</Link>
+                <Link className="link" href="auth/signup"> Register</Link>
               </li>
             </ul>
           </li>
           <li className="navbar__link dropdown">
-            <a href="#">About us</a>
+            <Link  className="link" href="#">About us</Link>
             <ul className="dropdown__menu">
               <li className="dropdown__menu-item">
-                <a href="#">Contact</a>
+                <Link className="link" href="#">Contact</Link>
               </li>
               <li className="dropdown__menu-item">
-                <a href="#">Careers</a>
+                <Link className="link" href="#">Careers</Link>
               </li>
               <li className="dropdown__menu-item">
-                <a href="#">Our team</a>
+                <Link className="link" href="#"> Team</Link>
               </li>
             </ul>
           </li>
