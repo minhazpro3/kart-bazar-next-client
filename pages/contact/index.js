@@ -1,8 +1,9 @@
 import React from 'react'
+import Contact_main from '../../components/contact/Contact_main'
 
 const index = () => {
   return (
-    <div>Contact page</div>
+    <div><Contact_main /></div>
   )
 }
 

@@ -45,7 +45,7 @@ const Head_cos = () => {
             <Link  className="link" href="#">About us</Link>
             <ul className="dropdown__menu">
               <li className="dropdown__menu-item">
-                <Link className="link" href="#">Contact</Link>
+                <Link className="link" href="/contact">Contact</Link>
               </li>
               <li className="dropdown__menu-item">
                 <Link className="link" href="#">Careers</Link>
