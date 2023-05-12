@@ -13,13 +13,22 @@
   .modal_product {
     width: 900px;
     height: 500px;
+    position: relative; //
+    @include media-responsive(md){
+        height: 500px;
+        @include media-responsive(sm){
+          height: 450px;
+          
+          
+        }
+    }
     background-color: $color_white;
     z-index: 12;
     position: relative;
     display: flex;
     align-items: center;
     @include media-responsive(md){
-        margin: 1rem 0.5rem;
+        margin: 0 1rem;
     }
 
     .delete_icon {
@@ -27,7 +36,7 @@
       right: -7px;
       top: -7px;
       @include media-responsive(md){
-        right: 10px;
+         
         z-index: 20;
       }
       h6 {
@@ -55,11 +64,19 @@
       gap: 10px;
       align-items: center;
       margin: 0px 16px;
+      position: relative;
     
       .modal_product_image {
         width: 100%;
         height: 350px;
         position: relative;
+        @include media-responsive(md){
+          width: 50%;
+          height: 150px;
+
+        
+        }
+       
       }
 
       .modal_product_texts {
@@ -68,6 +85,10 @@
           font-family: $font_family_poppins;
           color: $color_gray_dark;
           font-weight: $font_500;
+          @include media-responsive(md){
+            font-size: $font_extra_medium;
+            
+          }
         }
         .product_price {
           font-size: $font_large_large;
@@ -75,6 +96,10 @@
           font-weight: $font_500;
           color: $color_title_down;
           margin: 5px 0;
+          @include media-responsive(md){
+            font-size: $font_extra_medium;
+            
+          }
         }
 
         .review_count {
@@ -97,6 +122,10 @@
           font-weight: $font_500;
           margin-top: 16px;
           margin-bottom: 8px;
+          @include media-responsive(sm){
+            display: none;
+            
+          }
         }
         .product_description {
           font-family: $font_family_poppins;
@@ -104,6 +133,10 @@
           word-break: break-word;
           margin-bottom: 10px;
           opacity: 75%;
+          @include media-responsive(sm){
+            display: none;
+            
+          }
         }
         .product_types {
           p {
@@ -111,6 +144,11 @@
             font-size: $font_extra_medium;
             font-family: $font_family_poppins;
             margin: 2px 0px;
+            @include media-responsive(sm){
+             
+              font-size: $font_large_small;
+              
+            }
           }
         }
 
@@ -119,10 +157,16 @@
           font-size: $font_extra_medium;
           font-family: $font_family_poppins;
           margin: 12px 0px;
+          @include media-responsive(sm){
+            font-size: $font_large_small; 
+          }
 
           select {
             border: 1px solid $color_damage_green;
             outline: none;
+            @include media-responsive(sm){
+              font-size: $font_small; 
+            }
           }
         }
         .product_details_button {
@@ -133,6 +177,9 @@
             border-radius: 0;
             background-color: $color_gray_dark;
             font-family: $font_family_roboto;
+            @include media-responsive(sm){
+              font-size: $font_large_small;
+            }
             &:hover {
               margin-left: 0;
 
@@ -148,7 +195,9 @@
             @include shop_buttons(medium);
             border-radius: 0;
             background-color: $color_damage_green;
-
+            @include media-responsive(sm){
+              font-size: $font_large_small;
+            }
             &:hover {
               margin-left: 0;
               background-color: $color_button_red;
