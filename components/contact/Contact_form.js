@@ -16,12 +16,12 @@ const Contact_form = () => {
     <div className="container_signup_component">
     <div>
       <div className="signup_component">
-        {/* signup image */}
+        {/* contact image */}
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div className="signup_img">
             <Image
-              src="https://i.ibb.co/mX3wQDJ/sign-up.png"
-              alt="signup"
+              src="https://i.ibb.co/7WJJrmT/contact-us.png"
+              alt="contact"
               fill
             />
           </div>
@@ -36,8 +36,8 @@ const Contact_form = () => {
           <div className="inputs_group">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="form_title">
-                <h2>Welcome To Kart Bazar</h2>
-                <h5>Create a new account</h5>
+                <h2>Contact US</h2>
+                <h5>Any kind of problem or Question write us</h5>
               </div>
               {/* input group 1 */}
               <div className="input_group">
@@ -66,24 +66,16 @@ const Contact_form = () => {
               </div>
               {/* input group 3 */}
               <div className="input_group">
-                <input
-                  type="password"
-                  {...register("age", { min: 18, max: 99 })}
-                  name="password"
+                <textarea
+                  type="text"
+                  {...register("message", { min: 5, max: 150 })}
+                  name="message"
                   required
                 />
-                <label for="password">Password</label>
+                <label for="message">Message</label>
               </div>
               {/* input group 4 */}
-              <div className="input_group">
-                <input
-                  type="password"
-                  {...register("age", { min: 18, max: 99 })}
-                  name="confirm password"
-                  required
-                />
-                <label for="confirm password">Confirm Password</label>
-              </div>
+              
               {/* input group 5 */}
               <div className="terms_condition">
                 <label>
