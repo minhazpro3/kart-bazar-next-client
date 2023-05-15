@@ -51,6 +51,19 @@
             border: 1px solid $color_damage_green;
           }
         }
+        textarea {
+          width: 320px;
+          height: 140px;
+          font-size: $font_extra_medium;
+          padding: 0 10px;
+          background: $color_white;
+          border: 1px solid $color_gray_dark;
+          outline: none;
+          border-radius: 6px;
+          &:focus {
+            border: 1px solid $color_damage_green;
+          }
+        }
 
         label {
           position: absolute;

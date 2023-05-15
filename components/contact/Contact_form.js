@@ -66,13 +66,14 @@ const Contact_form = () => {
               </div>
               {/* input group 3 */}
               <div className="input_group">
-                <textarea
+                <textarea 
                   type="text"
                   {...register("message", { min: 5, max: 150 })}
                   name="message"
+                  placeholder="What is on your mind?"
                   required
                 />
-                <label for="message">Message</label>
+                 
               </div>
               {/* input group 4 */}
               
