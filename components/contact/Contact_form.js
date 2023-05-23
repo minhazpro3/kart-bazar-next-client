@@ -1,9 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
-import { FcGoogle } from "react-icons/fc";
-import { BsFacebook } from "react-icons/bs";
-import Link from "next/link";
+ 
 
 const Contact_form = () => {
     const {
@@ -13,12 +11,12 @@ const Contact_form = () => {
       } = useForm();
       const onSubmit = (data) => console.log(data);
   return (
-    <div className="container_signup_component">
+    <div className="container_contact_page">
     <div>
-      <div className="signup_component">
+      <div className="contact_component">
         {/* contact image */}
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <div className="signup_img">
+          <div className="contact_img">
             <Image
               src="https://i.ibb.co/7WJJrmT/contact-us.png"
               alt="contact"
@@ -33,14 +31,16 @@ const Contact_form = () => {
           }}
         >
           {/* signup form */}
-          <div className="inputs_group">
+          <div className="inputs_group_contact">
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="form_title">
+              <div className="form_title_contact">
                 <h2>Contact US</h2>
                 <h5>Any kind of problem or Question write us</h5>
               </div>
               {/* input group 1 */}
-              <div className="input_group">
+              <label for="name">Full Name</label>
+              <div className="input_group_contact">
+              
                 <input
                   {...register("name", {
                     required: true,
@@ -48,24 +48,26 @@ const Contact_form = () => {
                   })}
                   name="name"
                   required
+                  placeholder="Name"
                   aria-invalid={errors.firstName ? "true" : "false"}
                 />
-                {/* {errors.firstName?.type === "required" && (
-            <p role="alert">First name is required</p>
-          )} */}
-                <label for="name">Full Name</label>
+                
               </div>
+               
               {/* input group 2 */}
-              <div className="input_group">
+              <label for="email">Email Address</label>
+              <div className="input_group_contact">
                 <input
                   {...register("email", { pattern: /^[A-Za-z]+$/i })}
                   name="email"
                   required
+                  placeholder="Email"
                 />
-                <label for="email">Email Address</label>
               </div>
+               
               {/* input group 3 */}
-              <div className="input_group">
+              <label for="message">Message</label>
+              <div className="input_group_contact">
                 <textarea 
                   type="text"
                   {...register("message", { min: 5, max: 150 })}
@@ -75,49 +77,12 @@ const Contact_form = () => {
                 />
                  
               </div>
-              {/* input group 4 */}
               
-              {/* input group 5 */}
-              <div className="terms_condition">
-                <label>
-                  <input
-                    style={{ color: "green" }}
-                    type="checkbox"
-                    required
-                  />{" "}
-                  I agree with <span>Terms</span> and <span>Privacy</span>
-                </label>
-              </div>
-              <input type="submit" className="button" value="Signup" />
+            
+              <input type="submit" className="button" value="Send" />
             </form>
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <div className="third_auth">
-              <ul>
-                <hr />
-                <span>OR</span>
-              </ul>
-              <button className="third_button">
-                {" "}
-                <FcGoogle style={{ margin: "0 6px " }} /> Sign up with
-                Google{" "}
-              </button>
-              <button className="third_button">
-                {" "}
-                <BsFacebook
-                  style={{ margin: "0 6px ", color: "blue" }}
-                />{" "}
-                Sign up with Facebook{" "}
-              </button>
-              <h5>
-                Already have an account?
-                <span>
-                  {" "}
-                  <Link href="/auth/signin">Login</Link>
-                </span>
-              </h5>
-            </div>
-          </div>
+         
         </div>
       </div>
     </div>

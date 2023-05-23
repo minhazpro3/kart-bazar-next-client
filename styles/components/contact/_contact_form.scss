@@ -1,0 +1,95 @@
+.container_contact_page {
+    margin: 20px 0;
+    .contact_component {
+        @include container;
+
+        @include media-responsive(md) {
+            display: flex;
+            justify-content: center;
+        }
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        align-content: center;
+
+        .contact_img {
+            position: relative;
+            width: 75%;
+            height: 400px;
+
+            @include media-responsive(md) {
+                display: none;
+            }
+        }
+        .inputs_group_contact {
+            display: flex;
+            justify-content: center;
+
+            .form_title_contact {
+                h2 {
+                    font-family: $font_family_roboto;
+                }
+                h5 {
+                    font-family: $font_family_roboto;
+                }
+            }
+            label {
+                left: 8px;
+                padding: 2px 4px;
+
+                pointer-events: none;
+                transition: 0.5s;
+                opacity: 75%;
+            }
+
+            .input_group_contact {
+                input {
+                    width: 320px;
+                    height: 40px;
+                    font-size: $font_extra_medium;
+                    padding: 0 10px;
+                    background: $color_white;
+                    border: 1px solid $color_gray_dark;
+                    outline: none;
+                    font-family: $font_family_roboto;
+                    margin-bottom: 5px;
+                    border-radius: 6px;
+                    &:focus {
+                        border: 1px solid $color_damage_green;
+                    }
+                }
+                textarea {
+                    width: 320px;
+                    height: 140px;
+                    font-size: $font_extra_medium;
+                    padding: 5px 10px;
+                    background: $color_white;
+                    border: 1px solid $color_gray_dark;
+                    outline: none;
+
+                    font-family: $font_family_roboto;
+                    border-radius: 6px;
+                    &:focus {
+                        border: 1px solid $color_damage_green;
+                    }
+                }
+            }
+
+            .button {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 320px;
+                height: 40px;
+                cursor: pointer;
+                background: $color_damage_green;
+                color: $color_white;
+                border: none;
+                &:hover {
+                    background: $color_damage_green;
+                }
+            }
+        }
+    }
+}
