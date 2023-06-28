@@ -24,11 +24,11 @@ const Head_cos = () => {
         <div className="navbar__logo">Logo</div>
         <ul className="navbar__links" >
           <li className="navbar__link" style={{display:"flex", justifyContent:'center'}}>
-            <Link style={{display:"flex", justifyContent:'center'}} href="/"> Home </Link>
+            <Link    href="/"> Home </Link>
           </li>
 
           <li className="navbar__link dropdown">
-            <li style={{display:"flex", justifyContent:'center'}} >Pages</li>
+          <a  className="link"  >Pages</a>
             <ul className="dropdown__menu">
               <li className="dropdown__menu-item">
                 <Link className="link" href="shop"> Shop</Link>
@@ -43,7 +43,7 @@ const Head_cos = () => {
             </ul>
           </li>
           <li className="navbar__link dropdown">
-            <Link  className="link" href="#">About us</Link>
+            <a  className="link"  >About us</a>
             <ul className="dropdown__menu">
               <li className="dropdown__menu-item">
                 <Link className="link" href="/contact">Contact</Link>
