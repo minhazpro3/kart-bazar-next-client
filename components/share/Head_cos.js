@@ -22,12 +22,13 @@ const Head_cos = () => {
     <div className="container">
       <nav className="navbar">
         <div className="navbar__logo">Logo</div>
-        <ul className="navbar__links">
-          <li className="navbar__link">
-            <Link href="/"> Home </Link>
+        <ul className="navbar__links" >
+          <li className="navbar__link" style={{display:"flex", justifyContent:'center'}}>
+            <Link style={{display:"flex", justifyContent:'center'}} href="/"> Home </Link>
           </li>
+
           <li className="navbar__link dropdown">
-            <li  >Pages</li>
+            <li style={{display:"flex", justifyContent:'center'}} >Pages</li>
             <ul className="dropdown__menu">
               <li className="dropdown__menu-item">
                 <Link className="link" href="shop"> Shop</Link>

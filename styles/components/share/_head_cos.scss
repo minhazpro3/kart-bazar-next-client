@@ -21,13 +21,15 @@
     &__links {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+       column-gap: 16px;
       margin: 0;
+      margin-left: 0 !important;
       padding: 0;
 
       & .navbar__link {
-        margin-left: 2rem;
+         
         position: relative;
+        
         list-style: none;
         z-index: 15;
 
@@ -86,6 +88,7 @@
     .profile_logo {
       margin: 0 6px;
       font-size: $font_extra_medium;
+      list-style: none;
 
       &:hover {
         cursor: pointer;
